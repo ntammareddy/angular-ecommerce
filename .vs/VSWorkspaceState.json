@@ -11,6 +11,6 @@
     "\\src\\assets\\images",
     "\\src\\assets\\images\\products"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\services\\product.service.ts",
   "PreviewInSolutionExplorer": false
 }
