@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\common",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\product-list",
+    "\\src\\app\\services",
+    "\\src\\assets",
+    "\\src\\assets\\images",
+    "\\src\\assets\\images\\products"
+  ],
+  "SelectedNode": "\\src\\app\\components\\product-list\\product-list-grid.component.html",
+  "PreviewInSolutionExplorer": false
+}
