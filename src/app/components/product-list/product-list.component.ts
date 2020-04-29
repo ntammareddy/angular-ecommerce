@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductListComponent implements OnInit {
   currentCategoryId: number;
   products: Product[];
+  searchMode: boolean;
 
   constructor(private productService: ProductService,
     private route: ActivatedRoute) { }
@@ -20,6 +21,22 @@ export class ProductListComponent implements OnInit {
   }
 
   listProducts() {
+    this.searchMode = this.route.snapshot.paramMap.has('keyword');
+    if (this.searchMode) {
+      this.handleSearchProducts();
+    }
+    else {
+      this.handleListProducts();
+    }    
+  }
+
+  handleSearchProducts() {
+    const theKeyword: String = this.route.snapshot.paramMap.get("keyword");
+    this.productService.searchProducts(theKeyword).subscribe(
+      data =>{ this.products = data })
+  }
+
+  handleListProducts() {
     //check if "id" parameter is available
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has("id");
     if (hasCategoryId) {
@@ -30,7 +47,6 @@ export class ProductListComponent implements OnInit {
       //default to 1 as category
       this.currentCategoryId = 1;
     }
-
     this.productService.getProductList(this.currentCategoryId).subscribe(data => this.products = data);
   }
 }
