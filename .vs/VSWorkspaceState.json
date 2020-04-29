@@ -11,6 +11,6 @@
     "\\src\\assets\\images",
     "\\src\\assets\\images\\products"
   ],
-  "SelectedNode": "\\src\\app\\components\\product-list\\product-list-grid.component.html",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
