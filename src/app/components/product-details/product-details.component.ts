@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../common/product';
 import { ProductService } from '../../services/product.service';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../../services/cart.service';
+import { CartItem } from '../../common/cart-item';
 
 @Component({
   selector: 'app-product-details',
@@ -9,9 +11,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-
-  product: Product = new Product(); //initiate to avoid race condition on view. 
-  constructor(private productService: ProductService, private route: ActivatedRoute) { }
+  product: Product = new Product(); //initiate to avoid race condition on view.
+  constructor(private productService: ProductService,
+    private cartService: CartService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => this.handleProductDetails());
@@ -23,4 +26,9 @@ export class ProductDetailsComponent implements OnInit {
       data => { this.product = data });
   }
 
+  addToCart(product: Product) {
+    console.log("Adding to cart: " + product.name + ", " + product.unitPrice);
+    const cartItem: CartItem = new CartItem(product);
+    this.cartService.addToCart(cartItem);
+  }
 }
