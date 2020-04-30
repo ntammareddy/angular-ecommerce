@@ -64,6 +64,24 @@ export class CartService {
     }
     console.log('totalPrice:' + totalPriceValue.toFixed(2) + ",  totalQuantity:" + totalQuantityValue.toFixed(2));
   }
+
+  decrementQuantity(newCartItem: CartItem) {
+    newCartItem.quantity--;
+    if (newCartItem.quantity == 0) {
+      this.remove(newCartItem);
+    }
+    else {
+      this.computeCartTotals();
+    }
+  }
+
+  remove(newCartItem: CartItem) {
+    const itemIndex = this.cartItems.findIndex(tempCartItem => tempCartItem.id == newCartItem.id);
+    if (itemIndex > -1) {
+      this.cartItems.splice(itemIndex, 1);
+      this.computeCartTotals();
+    }
+  }
 }
 
 //////    About Subject:
