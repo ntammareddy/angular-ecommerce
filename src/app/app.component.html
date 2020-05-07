@@ -12,15 +12,33 @@
 
   <div class="page-container">
     <!-- HEADER DESKTOP-->
-    <header class="header-desktop">
-      <div class="section-content section-content-p30">
-        <div class="container-fluid">
-          <div class="header-wrap">
+    <!--<header class="header-desktop">
+    <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="header-wrap">
+          <app-search></app-search>
+          <app-cart-status></app-cart-status>
+        </div>
+        <div class="account-wrap"></div>
+      </div>
+    </div>
+  </header>-->
+    <header>
+      <div class="container">
+        <div class="row ">
+          <div class="col-1">
+            &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 offset-1 align-self-center">
             <app-search></app-search>
+          </div>
+          <div class="col-2 offset-1 align-self-center">
             <app-cart-status></app-cart-status>
           </div>
-          <div class="account-wrap"></div>
         </div>
+        <br/>
       </div>
     </header>
     <!-- END HEADER DESKTOP-->
@@ -54,7 +72,7 @@
         </div>
       </ng-template>
     </ngb-carousel>
-    <router-outlet></router-outlet>
+   <router-outlet></router-outlet>
   </div>
 </div>
 
