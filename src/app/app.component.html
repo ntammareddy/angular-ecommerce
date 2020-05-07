@@ -3,26 +3,26 @@
   <!-- MENU SIDEBAR-->
   <aside class="menu-sidebar d-none d-lg-block">
     <div style="padding:10px; padding-top:30px">
-        <a routerLink="/products">
-          <img src="assets/images/logo.png" alt="BestShop">
-        </a>
-      </div>
-      <app-product-category-menu></app-product-category-menu>
-</aside>
+      <a routerLink="/">
+        <img src="assets/images/logo.png" alt="BestShop">
+      </a>
+    </div>
+    <app-product-category-menu></app-product-category-menu>
+  </aside>
 
   <div class="page-container">
     <!-- HEADER DESKTOP-->
     <!--<header class="header-desktop">
-    <div class="section-content section-content-p30">
-      <div class="container-fluid">
-        <div class="header-wrap">
-          <app-search></app-search>
-          <app-cart-status></app-cart-status>
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+            <app-search></app-search>
+            <app-cart-status></app-cart-status>
+          </div>
+          <div class="account-wrap"></div>
         </div>
-        <div class="account-wrap"></div>
       </div>
-    </div>
-  </header>-->
+    </header>-->
     <header>
       <div class="container">
         <div class="row ">
@@ -38,47 +38,49 @@
             <app-cart-status></app-cart-status>
           </div>
         </div>
-        <br/>
+        <br />
       </div>
     </header>
     <!-- END HEADER DESKTOP-->
     <!-- MAIN CONTENT-->
-    <ngb-carousel *ngIf="images">
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <a routerLink="/products/5">
-            <img [src]="images[0]" alt="first slide">
+    <div *ngIf="router.url == '/'">
+      <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <a routerLink="/products/5">
+              <img [src]="images[0]" alt="first slide">
             </a>
-        </div>
-        <div class="carousel-caption">
-          <h1>MacBook Sale</h1>
-          <h5 style="color:black">Flash sale: Get upto 20,000Rs instant discount.</h5>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <a routerLink="/products/30">
-            <img [src]="images[1]" alt="second slide">
-          </a>
-        </div>
-        <div class="carousel-caption">
-          <h1>iPhone Sale</h1>
-          <h5 style="color:black">Only today: Get upto 10,000Rs rebate on iPhone XR.</h5>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <a routerLink="/products/60">
-            <img [src]="images[2]" alt="third slide">
-          </a>
-        </div>
-        <div class="carousel-caption">
-          <h1>Apple Student Discounts</h1>
-          <h5 style="color:black">Get upto 10% discount on eligible apple products with valid edu email.</h5>
-        </div>
-      </ng-template>
-    </ngb-carousel>
-   <router-outlet></router-outlet>
+          </div>
+          <div class="carousel-caption">
+            <h1>MacBook Sale</h1>
+            <h5 style="color:black">Flash sale: Get upto 20,000Rs instant discount.</h5>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <a routerLink="/products/30">
+              <img [src]="images[1]" alt="second slide">
+            </a>
+          </div>
+          <div class="carousel-caption">
+            <h1>iPhone Sale</h1>
+            <h5 style="color:black">Only today: Get upto 10,000Rs rebate on iPhone XR.</h5>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <a routerLink="/products/60">
+              <img [src]="images[2]" alt="third slide">
+            </a>
+          </div>
+          <div class="carousel-caption">
+            <h1>Apple Student Discounts</h1>
+            <h5 style="color:black">Get upto 10% discount on eligible apple products with valid edu email.</h5>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
 

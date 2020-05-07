@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-ecommerce';
-  images = [1, 2, 3].map((n) => `../assets/images/carousel/carousel_${n}.jpg`);
+  images: string[];
+
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.images = [1, 2, 3].map((n) => `../assets/images/carousel/carousel_${n}.jpg`);
+  }
 
 }
