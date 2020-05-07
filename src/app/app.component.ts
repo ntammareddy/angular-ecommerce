@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-ecommerce';
+  images = [1, 2, 3].map((n) => `../assets/images/carousel/carousel_${n}.jpg`);
+
 }

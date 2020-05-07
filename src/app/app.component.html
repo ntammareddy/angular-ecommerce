@@ -4,7 +4,7 @@
   <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
       <a routerLink="/products">
-        <img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
+        <img src="assets/images/logo.png" alt="BestShop" class="img-responsive">
       </a>
     </div>
     <app-product-category-menu></app-product-category-menu>
@@ -25,6 +25,35 @@
     </header>
     <!-- END HEADER DESKTOP-->
     <!-- MAIN CONTENT-->
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[0]" alt="first slide">
+        </div>
+        <div class="carousel-caption">
+          <h1>MacBook Sale</h1>
+          <h5 style="color:black">Flash sale: Get upto 20,000Rs instant discount.</h5>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[1]" alt="second slide">
+        </div>
+        <div class="carousel-caption">
+          <h1>iPhone Sale</h1>
+          <h5 style="color:black">Only today: Get upto 10,000Rs rebate on iPhone XR.</h5>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[2]" alt="third slide">
+        </div>
+        <div class="carousel-caption">
+          <h1>Apple Student Discounts</h1>
+          <h5 style="color:black">Get upto 10% discount on eligible apple products with valid edu email.</h5>
+        </div>
+      </ng-template>
+    </ngb-carousel>
     <router-outlet></router-outlet>
   </div>
 </div>

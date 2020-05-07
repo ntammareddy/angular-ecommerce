@@ -3,16 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\common",
     "\\src\\app\\components",
-    "\\src\\app\\components\\cart-details",
-    "\\src\\app\\components\\cart-status",
-    "\\src\\app\\components\\product-details",
     "\\src\\app\\components\\product-list",
+    "\\src\\app\\components\\search",
+    "\\src\\app\\services",
     "\\src\\assets",
     "\\src\\assets\\images",
     "\\src\\assets\\images\\products"
   ],
-  "SelectedNode": "\\src\\app\\components\\product-details\\product-details.component.ts",
+  "SelectedNode": "\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }
