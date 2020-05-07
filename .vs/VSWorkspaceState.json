@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
+    "\\src\\app\\components\\cart-status",
+    "\\src\\app\\components\\product-category-menu",
     "\\src\\app\\components\\product-list",
-    "\\src\\app\\components\\search",
-    "\\src\\app\\services",
     "\\src\\assets",
     "\\src\\assets\\images",
-    "\\src\\assets\\images\\products"
+    "\\src\\assets\\images\\carousel"
   ],
-  "SelectedNode": "\\src\\app\\app.component.ts",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
