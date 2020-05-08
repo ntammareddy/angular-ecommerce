@@ -8,9 +8,8 @@
   </a>
 </div>-->
 
-
+  <span style="margin-right:7px"> {{ totalPrice | currency: 'USD'}}</span>
   <a routerLink="/cart-details">
-    <span>{{totalQuantity}}</span>&nbsp;|&nbsp;<span> {{ totalPrice | currency: 'USD'}}</span> &nbsp;&nbsp;
     <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+    <span class='badge badge-warning' id='lblCartCount'> {{totalQuantity}} </span>
   </a>
-

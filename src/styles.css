@@ -315,6 +315,33 @@ input.au-input.au-input-xl {
 
 /* 
  * ----------------------------
+ * cart section
+ * ----------------------------
+ */
+.badge {
+  padding-left: 13px;
+  padding-right: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+
+#lblCartCount {
+  font-size: 16px;
+  background-color: darkgreen;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+/* 
+ * ----------------------------
  * Left Menu Bar
  * ----------------------------
  */
