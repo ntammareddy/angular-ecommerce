@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\common",
     "\\src\\app\\components",
-    "\\src\\app\\components\\cart-status",
-    "\\src\\app\\components\\product-category-menu",
-    "\\src\\app\\components\\product-list",
+    "\\src\\app\\components\\cart-details",
+    "\\src\\app\\components\\search",
     "\\src\\assets",
     "\\src\\assets\\images",
-    "\\src\\assets\\images\\carousel"
+    "\\src\\assets\\images\\products"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\components\\cart-status\\cart-status.component.html",
   "PreviewInSolutionExplorer": false
 }
