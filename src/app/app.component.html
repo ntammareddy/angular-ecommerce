@@ -46,7 +46,7 @@
     <div *ngIf="router.url == '/'">
       <ngb-carousel *ngIf="images">
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+          <div>
             <a routerLink="/products/5">
               <img [src]="images[0]" alt="first slide">
             </a>
@@ -57,7 +57,7 @@
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+          <div>
             <a routerLink="/products/30">
               <img [src]="images[1]" alt="second slide">
             </a>
@@ -68,7 +68,7 @@
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
+          <div>
             <a routerLink="/products/60">
               <img [src]="images[2]" alt="third slide">
             </a>
