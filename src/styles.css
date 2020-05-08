@@ -139,7 +139,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr {
  * ----------------------------
  */
 
-.header-desktop {
+/*.header-desktop {
   background: #0da8e4;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
   -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
@@ -194,7 +194,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center
-}
+}*/
 
 .number {
   padding: 6px 0
@@ -329,7 +329,7 @@ input.au-input.au-input-xl {
   overflow-y: auto
 }
 
-  .menu-sidebar .logo {
+  /*.menu-sidebar .logo {
     background: #fff;
     height: 75px;
     padding: 0 35px;
@@ -349,7 +349,7 @@ input.au-input.au-input-xl {
     border-right: 1px solid #e5e5e5;
     position: relative;
     z-index: 3
-  }
+  }*/
 
   .menu-sidebar .navbar-list .navbar-sub-list {
     display: none;
@@ -393,7 +393,7 @@ input.au-input.au-input-xl {
  * ----------------------------
  */
 
-.header-mobile {
+/*.header-mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -502,8 +502,6 @@ input.au-input.au-input-xl {
         .header-mobile .navbar-mobile .navbar-mobile-list li a:hover {
           color: #0da8e4
         }
-
-        .header-mobile .navbar-mobile .navbar-mobile-list li a > i {
           margin-right: 19px
         }
 
@@ -522,7 +520,9 @@ input.au-input.au-input-xl {
   position: static
 }
 
-  .header-mobile-2.header-mobile .navbar-mobile {
+  .header-
+        .header-mobile .navbar-mobile .navbar-mobile-list li a > i {
+mobile-2.header-mobile .navbar-mobile {
     top: 82px
   }
 
@@ -540,7 +540,7 @@ input.au-input.au-input-xl {
 
       .header-mobile-2.header-mobile .hamburger .hamburger-box .hamburger-inner::after {
         background: #fff
-      }
+      }*/
 
 .main-content.page-m {
   padding: 10% 15% !important
@@ -552,7 +552,7 @@ input.au-input.au-input-xl {
  * ----------------------------
  */
 
-.product-box img {
+/*.product-box img {
   width: 150px;
 }
 
@@ -570,11 +570,7 @@ input.au-input.au-input-xl {
   margin-bottom: 60px
 }
 
-.price {
-  margin: 15px 0 0;
-  font-weight: 800;
-  color: #0da8e4
-}
+
 
 .product-box h1 {
   font-size: 18px;
@@ -590,7 +586,13 @@ input.au-input.au-input-xl {
   padding-bottom: 0;
   font-weight: 500;
   color: #585858
-}
+}*/
+
+/*.price {
+  margin: 15px 0 0;
+  font-weight: 800;
+  color: #0da8e4
+}*/
 
 /* 
  * ----------------------------

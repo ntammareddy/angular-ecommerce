@@ -25,20 +25,16 @@
     </header>-->
     <header>
       <div class="container">
-        <div class="row ">
-          <div class="col-1">
-            &nbsp;
+        <div class="row" style="margin:25px 25px">
+          <div class="col-5 offset-1">
+              <app-search></app-search>
+            </div>
+            <div class="col-5">
+              <div style="float:right">
+                <app-cart-status></app-cart-status>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-8 offset-1 align-self-center">
-            <app-search></app-search>
-          </div>
-          <div class="col-2 offset-1 align-self-center">
-            <app-cart-status></app-cart-status>
-          </div>
-        </div>
-        <br />
       </div>
     </header>
     <!-- END HEADER DESKTOP-->
