@@ -1,44 +1,54 @@
 <div class="page-wrapper">
 
   <!-- MENU SIDEBAR-->
-  <aside class="menu-sidebar d-none d-lg-block">
+  <!--<aside class="menu-sidebar d-none d-lg-block">
     <div style="padding:10px; padding-top:30px">
       <a routerLink="/">
         <img src="assets/images/logo.png" alt="BestShop">
       </a>
     </div>
     <app-product-category-menu></app-product-category-menu>
-  </aside>
-
-  <div class="page-container">
-    <!-- HEADER DESKTOP-->
-    <!--<header class="header-desktop">
-      <div class="section-content section-content-p30">
-        <div class="container-fluid">
-          <div class="header-wrap">
-            <app-search></app-search>
+  </aside>-->
+  <!--<div class="page-container">-->
+  <!-- HEADER DESKTOP-->
+  <!--<header class="header-desktop">
+    <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="header-wrap">
+          <app-search></app-search>
+          <app-cart-status></app-cart-status>
+        </div>
+        <div class="account-wrap"></div>
+      </div>
+    </div>
+  </header>-->
+  <div class="container">
+    <header>
+      <div class="row" style="margin:25px">
+        <div class="col-md-3">
+          <a routerLink="/">
+            <img src="assets/images/logo.png" alt="BestShop">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <app-search></app-search>
+        </div>
+        <div class="col-md-4">
+          <div style="float:right">
             <app-cart-status></app-cart-status>
           </div>
-          <div class="account-wrap"></div>
         </div>
       </div>
-    </header>-->
-    <header>
-      <div class="container">
-        <div class="row" style="margin:25px 25px">
-          <div class="col-5 offset-1">
-              <app-search></app-search>
-            </div>
-            <div class="col-5">
-              <div style="float:right">
-                <app-cart-status></app-cart-status>
-              </div>
-            </div>
-          </div>
-      </div>
+      <!--<app-product-category-menu></app-product-category-menu>-->
+
     </header>
     <!-- END HEADER DESKTOP-->
     <!-- MAIN CONTENT-->
+    <div style="margin-left:60px;" *ngIf="router.url == '/products' || router.url.includes('/category') ">
+      <span>
+        Category:       <app-product-category-menu></app-product-category-menu>
+      </span>
+    </div>
     <div *ngIf="router.url == '/products'">
       <ngb-carousel *ngIf="images">
         <ng-template ngbSlide>
@@ -49,7 +59,7 @@
           </div>
           <div class="carousel-caption">
             <h1>MacBook Sale</h1>
-            <h5 style="color:black">Flash sale: Get upto 20,000Rs instant discount.</h5>
+            <h5 style="color:black">Flash sale: Get upto 500$ instant discount.</h5>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -60,7 +70,7 @@
           </div>
           <div class="carousel-caption">
             <h1>iPhone Sale</h1>
-            <h5 style="color:black">Only today: Get upto 10,000Rs rebate on iPhone XR.</h5>
+            <h5 style="color:black">Only today: Get upto 200$ rebate on iPhone XR.</h5>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -78,10 +88,13 @@
     </div>
     <router-outlet></router-outlet>
   </div>
+
+  <!--</div>-->
+  <!-- END PAGE CONTAINER-->
+
+  <footer>
+    <p>This site is developed by Naveen K Tammareddy for demonstration purposes.</p>
+  </footer>
+
+
 </div>
-
-<!-- END PAGE CONTAINER-->
-
-<footer>
-  <p>This site is developed by Naveen K Tammareddy for demonstration purposes.</p> 
-</footer>
