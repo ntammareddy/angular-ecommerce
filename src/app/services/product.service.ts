@@ -11,6 +11,11 @@ import { ProductCategory } from '../common/product-category';
 export class ProductService {
   private baseUrl = "http://localhost:8080/api/products"
   private categoryUrl = "http://localhost:8080/api/product-category"
+
+  //////// AWS Spring App  ////////
+  //private baseUrl = "http://springapi-env.eba-gwjkmbiq.us-east-2.elasticbeanstalk.com/api/products"
+  //private categoryUrl = "http://springapi-env.eba-gwjkmbiq.us-east-2.elasticbeanstalk.com/api/product-category"
+
   constructor(private httpClient: HttpClient) { }
 
   getProduct(productId: number): Observable<Product> {
