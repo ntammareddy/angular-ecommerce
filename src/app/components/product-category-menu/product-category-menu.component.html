@@ -1,12 +1,23 @@
-<div class="menu-sidebar-content js-scrollbar1">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="IdShopByCategoryDDL" ngbDropdownToggle>{{selectedCategoryName}}</button>
+      <div ngbDropdownMenu aria-labelledby="IdShopByCategoryDDL">
+        <button ngbDropdownItem routerLink="/products" routerLinkActive ="active-link" (click)="setSelectedCategory('All')">All</button>
+        <button ngbDropdownItem *ngFor="let category of productCategories" routerLink="/category/{{category.id}}" routerLinkActive ="active-link" (click)="setSelectedCategory(category.categoryName)" >
+          {{category.categoryName}}
+        </button>
+      </div>
+    </div>
+
+
+<!--<div>
   <nav class="navbar-sidebar">
     <ul class="list-unstyled navbar-list">
       <li *ngFor="let category of productCategories">
         <a routerLink="/category/{{category.id}}" routerLinkActive="active-link">
           {{category.categoryName}}
         </a>
-        <!--routerLinkActive is the css that will be applied to indicate link is clicked-->
+        routerLinkActive is the css that will be applied to indicate link is clicked
       </li>
     </ul>
   </nav>
-</div>
+</div>-->
