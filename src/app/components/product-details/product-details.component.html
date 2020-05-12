@@ -1,7 +1,8 @@
 
 <div class="row">
   <div class="col-lg-4 col-md-5">
-    <img src="{{product?.imageUrl}}" class="rounded"/>
+    <br /><br />
+    <img src="{{product?.imageUrl}}" class="rounded" />
   </div>
   <div class="col-lg-5 col-md-6" style="padding:35px;">
     <h3>{{product?.name}}</h3>
@@ -21,24 +22,3 @@
     <a routerLink="/products" class="mt-5">Back to Product List</a>
   </div>
 </div>
-
-
-
-
-
-
-
-<!--<div class="detail-section">
-  <div class="container-fluid">
-    <img src="{{product?.imageUrl}}" class="detail-img" />
-    <h3>{{product?.name}}</h3>
-
-    <div class="price">{{product?.unitPrice | currency: 'USD'}}</div>
-    <button class="btn btn-primary btn-sm" (click)="addToCart(product)">Add to cart</button>
-    <hr>
-    <h4>Description</h4>
-    <p>{{product?.description}}</p>
-    <a routerLink="/products" class="mt-5">Back to Product List</a>
-  </div>
-</div>-->
-<!--Notes: product?.imageUrl : get url only if product is not null or undefined -->
