@@ -1,13 +1,7 @@
 <div class="form-header">
-  <!--<input #myInput class="au-input au-input-xl" type="text"
-         placeholder="Search for data ..." (keyup.enter)="doSearch(myInput.value)" />
-  <button class="au-btn-submit" (click)="doSearch(myInput.value)">
-    Search
-  </button>-->
-
   <input #IdSearchText type="text" class="form-control"
          (keyup.enter)="doSearch(IdSearchText.value)"
-         placeholder="Search for products and more...">
+         placeholder="Search for products...">
 
   <div class="input-group-append">
     <button class="btn btn-outline-secondary" type="button" (click)="doSearch(IdSearchText.value)">Search</button>
