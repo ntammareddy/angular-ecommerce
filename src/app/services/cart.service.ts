@@ -6,11 +6,14 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  cartItems: CartItem[] = [];
+  cartItems: CartItem[];
   totalPrice: Subject<number> = new Subject<number>(); //Subject will send event(publish) to all the subscribers
   totalQuantity: Subject<number> = new Subject<number>();
 
-  constructor() { }
+  constructor() {
+    this.cartItems = JSON.parse(sessionStorage.getItem('cartItems')) ?
+      JSON.parse(sessionStorage.getItem('cartItems')) : [];
+  }
 
   addToCart(newCartItem: CartItem) {
     //check if we already have the item in cart
@@ -50,6 +53,8 @@ export class CartService {
     //'next' will publish the new values..all subscribers will receive the new data
     this.totalPrice.next(totalPriceValue);
     this.totalQuantity.next(totalQuantityValue);
+
+    this.persistCartItems();
   }
 
   decrementQuantity(newCartItem: CartItem) {
@@ -68,5 +73,9 @@ export class CartService {
       this.cartItems.splice(itemIndex, 1);
       this.computeCartTotals();
     }
+  }
+
+  persistCartItems() {
+    sessionStorage.setItem('cartItems', JSON.stringify(this.cartItems));
   }
 }
