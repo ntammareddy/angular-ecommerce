@@ -4,6 +4,5 @@ export class Constants {
   static readonly categoryUrl = Constants.baseUrl + "/product-category"
 }
 
-//////// AWS Spring App  ////////
-//productsUrl = "http://springapi-env.eba-gwjkmbiq.us-east-2.elasticbeanstalk.com/api/products"
-//categoryUrl = "http://springapi-env.eba-gwjkmbiq.us-east-2.elasticbeanstalk.com/api/product-category"
+///////  AWS   ///////
+//static readonly baseUrl = "http://springapi-env.eba-gwjkmbiq.us-east-2.elasticbeanstalk.com/api"
