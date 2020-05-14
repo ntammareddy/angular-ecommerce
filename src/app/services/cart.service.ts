@@ -11,8 +11,7 @@ export class CartService {
   totalQuantity: Subject<number> = new Subject<number>();
 
   constructor() {
-    this.cartItems = JSON.parse(sessionStorage.getItem('cartItems')) ?
-      JSON.parse(sessionStorage.getItem('cartItems')) : [];
+    this.cartItems = [];
   }
 
   addToCart(newCartItem: CartItem) {
@@ -53,8 +52,6 @@ export class CartService {
     //'next' will publish the new values..all subscribers will receive the new data
     this.totalPrice.next(totalPriceValue);
     this.totalQuantity.next(totalQuantityValue);
-
-    this.persistCartItems();
   }
 
   decrementQuantity(newCartItem: CartItem) {
@@ -73,9 +70,5 @@ export class CartService {
       this.cartItems.splice(itemIndex, 1);
       this.computeCartTotals();
     }
-  }
-
-  persistCartItems() {
-    sessionStorage.setItem('cartItems', JSON.stringify(this.cartItems));
   }
 }
